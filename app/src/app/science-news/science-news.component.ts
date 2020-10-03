@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-science-news',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScienceNewsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _bottomSheet: MatBottomSheet
+    ) { }
 
   ngOnInit(): void {
+  }
+
+  openBottomSheet(): void {
+    this._bottomSheet.open(ModalComponent);
   }
 
 }

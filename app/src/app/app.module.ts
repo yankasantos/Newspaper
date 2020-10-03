@@ -9,6 +9,11 @@ import { ModalComponent } from './modal/modal.component';
 import { TechnologyNewsComponent } from './technology-news/technology-news.component';
 import { ScienceNewsComponent } from './science-news/science-news.component';
 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatCardModule} from '@angular/material/card';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +26,10 @@ import { ScienceNewsComponent } from './science-news/science-news.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTabsModule,
+    MatCardModule,
+    MatBottomSheetModule
   ],
   providers: [],
   bootstrap: [AppComponent]

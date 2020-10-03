@@ -1,1 +1,20 @@
-<p>home works!</p>
+<section>
+    <div class="header">
+        <mat-toolbar>
+            <span>Newspaper</span>
+        </mat-toolbar>
+    </div>
+    <div class="container">
+        <mat-tab-group mat-align-tabs="center" animationDuration="2000ms">
+            <mat-tab label="Technology">
+                <h1>technology</h1>
+                <app-technology-news></app-technology-news>
+            </mat-tab>
+            <mat-tab label="Science">
+                <h1>science</h1> 
+                <app-science-news></app-science-news>
+            </mat-tab>            
+        </mat-tab-group>
+    </div>
+    <div class="footer"></div>
+</section>
