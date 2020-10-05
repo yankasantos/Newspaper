@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,13 +24,14 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
     ScienceNewsComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatTabsModule,
     MatCardModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
