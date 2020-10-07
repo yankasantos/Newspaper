@@ -1,4 +1,4 @@
-export class ListPostScience{
+export class ListPostTechnology{
     section: string;
     num_results:number;
     last_updated: string;
