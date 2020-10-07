@@ -27,4 +27,19 @@ mat-card::ng-deep :hover{
   color: #FF7D1A;
   font-weight: 400;
 }
-  
+
+button::ng-deep{
+  background: #FF7D1A;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  border-radius: 0.5rem;
+  border: 1px solid #caca;
+  box-shadow: 0.25rem 0.25rem 0.75rem #ccc;
+
+}
+
+button::ng-deep :hover{
+  background: #42C6E3;
+  color: #fff;
+}
