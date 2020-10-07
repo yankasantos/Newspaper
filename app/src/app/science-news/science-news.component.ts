@@ -20,7 +20,7 @@ export class ScienceNewsComponent implements OnInit {
     ){}
 
   ngOnInit(): void {
-    this.scienceService.getNews();
+    this.getNews();
   }
 
   openBottomSheet(): void {
@@ -30,7 +30,7 @@ export class ScienceNewsComponent implements OnInit {
   // Chama o serviço para obtém todos os posts
   getNews() {
     this.scienceService.getNews().subscribe((listPostsScience: ListPostScience[]) => {
-      // this.postScience.results = listPostsScience;
+      this.listPostsScience = listPostsScience;
       
     });
   }

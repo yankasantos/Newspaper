@@ -10,7 +10,7 @@ import { environment} from '../../../environments/environment';
 })
 export class ScienceService {
 
-    urlRequest= `${environment.apiUrlScience}api-key=${environment.apiKey}`;
+    urlRequest= `${environment.apiUrlScience}?api-key=${environment.apiKey}`;
   
     // injetando o HttpClient
     constructor(private httpClient: HttpClient) { }

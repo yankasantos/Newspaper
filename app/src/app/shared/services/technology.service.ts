@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule, HttpErrorResponse,HttpHeaders} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-import { ListPostScience } from '../model/list-post-science.model';
+import { ListPostTechnology } from '../model/list-post-technology.model';
 import { environment} from '../../../environments/environment';
 
 @Injectable({
@@ -11,7 +11,7 @@ import { environment} from '../../../environments/environment';
 export class TechnologyService {
 
   
-    urlRequest= `${environment.apiUrlTechnology}api-key=${environment.apiKey}`;
+    urlRequest= `${environment.apiUrlTechnology}?api-key=${environment.apiKey}`;
   
     // injetando o HttpClient
     constructor(private httpClient: HttpClient) { }
@@ -22,8 +22,8 @@ export class TechnologyService {
     }
 
      // Obtem todos os noticias
-    getNews(): Observable<ListPostScience[]> {
-      return this.httpClient.get<ListPostScience[]>(this.urlRequest)
+    getNews(): Observable<ListPostTechnology[]> {
+      return this.httpClient.get<ListPostTechnology[]>(this.urlRequest)
         .pipe(
           retry(2),
           catchError(this.handleError)
