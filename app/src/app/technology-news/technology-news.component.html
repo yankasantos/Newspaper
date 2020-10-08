@@ -1,15 +1,15 @@
 <section>
     <div class="technologyContainer">
         <ul class="listNews">
-            <li class="post" *ngFor="let post of listPostsTechnology" >
+            <li class="post" *ngFor="let post of technologyPostResults" >
                 <mat-card class="example-card">
                     <mat-card-header>
-                      <mat-card-title>{{listPostsTechnology.title}}</mat-card-title>
-                      <mat-card-subtitle>{{listPostsTechnology.section}}</mat-card-subtitle>
+                      <mat-card-title>{{post.title}}</mat-card-title>
+                      <mat-card-subtitle>{{post.section}}</mat-card-subtitle>
                     </mat-card-header>
                     <mat-card-content>
                       <p>
-                       {{listPostsTechnology.abstract}}
+                       {{post.abstract}}
                       </p>
                     </mat-card-content>
                     <mat-card-actions>

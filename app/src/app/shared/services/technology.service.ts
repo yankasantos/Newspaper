@@ -22,8 +22,8 @@ export class TechnologyService {
     }
 
      // Obtem todos os noticias
-    getNews(): Observable<ListPostTechnology[]> {
-      return this.httpClient.get<ListPostTechnology[]>(this.urlRequest)
+    getNews(): Observable<ListPostTechnology> {
+      return this.httpClient.get<ListPostTechnology>(this.urlRequest)
         .pipe(
           retry(2),
           catchError(this.handleError)

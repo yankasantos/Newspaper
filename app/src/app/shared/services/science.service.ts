@@ -21,8 +21,8 @@ export class ScienceService {
     }
 
      // Obtem todos os noticias
-    getNews(): Observable<ListPostScience[]> {
-      return this.httpClient.get<ListPostScience[]>(this.urlRequest)
+    getNews(): Observable<ListPostScience> {
+      return this.httpClient.get<ListPostScience>(this.urlRequest)
         .pipe(
           retry(2),
           catchError(this.handleError)

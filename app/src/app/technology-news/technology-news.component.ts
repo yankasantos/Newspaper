@@ -14,7 +14,8 @@ import { ListPostTechnology } from '../shared/model/list-post-technology.model';
 export class TechnologyNewsComponent implements OnInit {
 
   postTechnology = {} as ListPostTechnology;
-  listPostsTechnology: ListPostTechnology[];
+  listPostsTechnology: ListPostTechnology;
+  technologyPostResults : any;
 
   constructor(
     private _bottomSheet: MatBottomSheet,
@@ -22,6 +23,7 @@ export class TechnologyNewsComponent implements OnInit {
     ){}
 
   ngOnInit(): void {
+    // this.technologyService.getNews();
     this.getNews();
   }
 
@@ -31,8 +33,9 @@ export class TechnologyNewsComponent implements OnInit {
 
   // Chama o serviço para obtém todos os posts
   getNews() {
-    this.technologyService.getNews().subscribe((listPostsTechnology: ListPostTechnology[]) => {
-      this.listPostsTechnology = listPostsTechnology;
+    this.technologyService.getNews().subscribe((listPostsTechnology: ListPostTechnology) => {
+      // this.listPostsTechnology = listPostsTechnology;
+      this.technologyPostResults = listPostsTechnology.results;
     });
   }
 

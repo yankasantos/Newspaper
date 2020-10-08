@@ -13,7 +13,7 @@ export class ScienceNewsComponent implements OnInit {
 
   postScience = {} as ListPostScience;
   listPostsScience: ListPostScience[];
-
+  sciencePostResults : any;
   constructor(
     private _bottomSheet: MatBottomSheet,
     private scienceService: ScienceService
@@ -29,9 +29,8 @@ export class ScienceNewsComponent implements OnInit {
 
   // Chama o serviço para obtém todos os posts
   getNews() {
-    this.scienceService.getNews().subscribe((listPostsScience: ListPostScience[]) => {
-      this.listPostsScience = listPostsScience;
-      
+    this.scienceService.getNews().subscribe((listPostsScience: ListPostScience) => {
+      this.sciencePostResults = listPostsScience.results;      
     });
   }
 
